@@ -16,7 +16,7 @@ export class VerifyUrlController {
             }
 
             const urlData = await this.verifyUseCase.perform(inputDTO);
-            return res.status(200).json({ message: "ok", data:[urlData] });
+            return res.status(200).json({ message: "ok", data: [urlData] });
         } catch (error) {
             console.log(error);
             if (error instanceof Error) {
